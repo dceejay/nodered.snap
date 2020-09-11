@@ -66,7 +66,6 @@ parts:
       find $SNAPCRAFT_PART_INSTALL -type f -name '*.js.swp' -delete
       find $SNAPCRAFT_PART_INSTALL/lib/node_modules -type d -name test -prune -exec rm -rf {} \;
       find $SNAPCRAFT_PART_INSTALL/lib/node_modules -type d -name doc -prune -exec rm -rf {} \;
-      find $SNAPCRAFT_PART_INSTALL/lib/node_modules -type d -name example* -prune -exec rm -rf {} \;
       find $SNAPCRAFT_PART_INSTALL/lib/node_modules -type d -name sample -prune -exec rm -rf {} \;
       find $SNAPCRAFT_PART_INSTALL/lib/node_modules -type d -iname benchmark* -prune -exec rm -rf {} \;
       find $SNAPCRAFT_PART_INSTALL/lib/node_modules -type d -iname .nyc_output -prune -exec rm -rf {} \;
