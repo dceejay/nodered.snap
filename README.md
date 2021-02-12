@@ -16,12 +16,15 @@ When installed as a Snap package, it will run in a secure container that does
 not have access to any external facilities that may be needed for you to use, such as:
 
  - You cannot install extra nodes that require natively compiled code as the build tools are not built in.
- - You cannot use projects mode as that requires comman line access to git and that is also not built in.
- - access to the main system storage/disk
- - `gcc` - needed to compile any binary components of nodes you want to install
- - `git` - needed if you want to use the Projects feature
+ - You cannot use projects mode as that requires command line access to git as that is also not built in.
+ - There is no access to any external commands your flow may want to use with the Exec node (for example).
+
+ To be explicit:
+ - No `gcc` - needed to compile any binary components of nodes you want to install
+ - No `git` - needed if you want to use the Projects feature
+ - No access to the main system storage/disk
  - No direct access to gpio hardware
- - No access to any external commands your flows want to use with the Exec node (for example).
+
 
 You may be able relax this by installing the snap in `--classic` mode but this is not advised, and Canonical have tightened the scope recently and this is no longer possible unless in development mode. (IE you have to clone this and build the snap yourself)
 
