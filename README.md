@@ -20,10 +20,10 @@ not have access to any external facilities that may be needed for you to use, su
  - access to the main system storage/disk
  - `gcc` - needed to compile any binary components of nodes you want to install
  - `git` - needed if you want to use the Projects feature
- - direct access to gpio hardware
- - access to any external commands your flows want to use with the Exec node (for example).
+ - No direct access to gpio hardware
+ - No access to any external commands your flows want to use with the Exec node (for example).
 
-You may be able relax this by installing the snap in `--classic` mode but this is not advised, and Canonical have tightened the scope recently and this may no longer be possible unless in development mode.
+You may be able relax this by installing the snap in `--classic` mode but this is not advised, and Canonical have tightened the scope recently and this is no longer possible unless in development mode. (IE you have to clone this and build the snap yourself)
 
 **ping**: If you want to use the ping node you must manually connect the network-observe interface.
 
@@ -33,6 +33,12 @@ You may be able relax this by installing the snap in `--classic` mode but this i
 #### Installing
 
     snap install node-red
+
+if installing on a Pi please ensure the core is also at the latest level
+
+    sudo snap install core
+    or
+    sudo snap refresh core
 
 When the snap is running you can view the Node-RED log using
 
