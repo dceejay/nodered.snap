@@ -55,6 +55,7 @@ parts:
     source: .
     stage-packages:
       - python
+      - libatomic1
     override-build: | # Whatever steps needed to install node-red into the install folder, which gets incorporated into the snap
       PATH=$PATH:../npm/bin
       apt-get install libatomic1
