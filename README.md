@@ -58,7 +58,7 @@ USB serial ports (hot-pluggable) are not yet supported by Snap.
 
 #### Configuration
 
-The **settings.js** and **flows.json** file are located in the `/root/snap/node-red/current/` directory.
+The **settings.js** and **flows.json** file are located in the `/var/snap/node-red/current/` directory.
 If you do need to read and write files - this is the only directory path you will have access to from outside
 the secure container.
 
@@ -68,7 +68,7 @@ To install any extra nodes, the best option is to use the Manage Palette option 
 To install via the command line you can
 
     sudo su -
-    cd /root/snap/node-red/current/
+    cd /var/snap/node-red/current/
     node-red.npm i --unsafe-perm node-red-contrib-my-great-node-name
     snap restart node-red
 
