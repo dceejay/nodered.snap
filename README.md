@@ -32,16 +32,28 @@ You may be able relax this by installing the snap in `--classic` mode but this i
 
     sudo snap connect node-red:network-observe
 
+### Pre-requisites
 
-#### Installing
+You need to be running **snapd** 2.5 or better - you may need to upgrade from the edge channel
 
-    snap install node-red
+    sudo snap refresh snapd --edge
 
-if installing on a Pi please ensure the core is also at the latest level
+If installing on a Pi please ensure the core is also at the latest level
 
     sudo snap install core
     or
     sudo snap refresh core
+
+
+#### Installing
+
+To load the latest stable version
+
+    snap install node-red
+
+To load the latest version - (ensure snapd is v2.5 or better first as per above)
+
+    snap install node-red --edge
 
 When the snap is running you can view the Node-RED log using
 
