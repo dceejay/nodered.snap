@@ -5,7 +5,7 @@ export PORT
 if [ ! -f $SNAP_DATA/settings.js ]; then
     if [ -f $SNAP_USER_DATA/settings.js ]; then
         echo "MIGRATE - Move settings.js to "$SNAP_DATA
-        mv $SNAP_USER_DATA/* $SNAP_DATA/
+        mv $SNAP_USER_DATA/* $SNAP_USER_DATA/.config* $SNAP_DATA/
     else
         echo "NEW - Copy settings.js to "$SNAP_DATA
         cp $SNAP/lib/node_modules/node-red/settings.js $SNAP_DATA/
