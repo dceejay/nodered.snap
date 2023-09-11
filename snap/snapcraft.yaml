@@ -12,6 +12,7 @@ architectures:
   - build-on: armhf
   - build-on: arm64
   - build-on: s390x
+  - build-on: ppc64el
 
 apps:
   node-red:
@@ -49,6 +50,7 @@ parts:
       - on armhf: https://nodejs.org/dist/v18.17.1/node-v18.17.1-linux-armv7l.tar.gz
       - on arm64: https://nodejs.org/dist/v18.17.1/node-v18.17.1-linux-arm64.tar.gz
       - on s390x: https://nodejs.org/dist/v18.17.1/node-v18.17.1-linux-s390x.tar.gz
+      - on ppc64el: https://nodejs.org/dist/v18.17.1/node-v18.17.1-linux-ppc64le.tar.gz
   node-red:
     after: [node]
     plugin: nil # We use the nil plugin so we can fully override the build with whatever we need to do
