@@ -54,7 +54,7 @@ parts:
     plugin: nil # We use the nil plugin so we can fully override the build with whatever we need to do
     source: .
     stage-packages:
-      - python
+      - python3
       - libatomic1
     override-build: | # Whatever steps needed to install node-red into the install folder, which gets incorporated into the snap
       PATH=$PATH:../npm/bin
