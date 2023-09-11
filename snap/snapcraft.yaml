@@ -4,7 +4,7 @@ summary: Low-code programming for event-driven applications
 description: Node-RED is a flow based programming application for wiring together hardware devices, APIs and online services in new and interesting ways. For more information see http://nodered.org
 confinement: strict
 grade: stable
-base: core20
+base: core22
 
 # Limit architectures as ppcel64 doesn't build currently
 architectures:
