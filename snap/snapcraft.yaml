@@ -6,7 +6,6 @@ confinement: strict
 grade: stable
 base: core22
 
-# Limit architectures as ppcel64 doesn't build currently
 architectures:
   - build-on: amd64
   - build-on: armhf
