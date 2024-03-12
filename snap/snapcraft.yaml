@@ -55,7 +55,7 @@ parts:
     stage-packages:
       - python3
       - libatomic1
-    override-build: | # Whatever steps needed to install node-red into the install folder, which gets incorporated into the snap
+    # override-build: | # Whatever steps needed to install node-red into the install folder, which gets incorporated into the snap
       PATH=$PATH:../npm/bin
       apt-get install libatomic1
       # npm config set unsafe-perm true
