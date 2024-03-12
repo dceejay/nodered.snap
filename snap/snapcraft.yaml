@@ -90,7 +90,7 @@ parts:
       find $SNAPCRAFT_PART_INSTALL/lib/node_modules -type f -iname "*~" -exec rm -f {} \;
       VER=$(npm show node-red version)
       echo "VERSION $(npm show node-red version)"
-      snapcraftctl set-version $VER
+      
   settings:
     plugin: dump
     source: snap/local/settings # snapcraft now prefers local parts to be in snap/local
