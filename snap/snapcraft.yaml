@@ -45,11 +45,11 @@ parts:
   node: # We dump in a specific version of node/npm from upstream.
     plugin: dump
     source:
-      - on amd64: https://nodejs.org/dist/v18.18.2/node-v18.18.2-linux-x64.tar.gz
-      - on armhf: https://nodejs.org/dist/v18.18.2/node-v18.18.2-linux-armv7l.tar.gz
-      - on arm64: https://nodejs.org/dist/v18.18.2/node-v18.18.2-linux-arm64.tar.gz
-      - on s390x: https://nodejs.org/dist/v18.18.2/node-v18.18.2-linux-s390x.tar.gz
-      - on ppc64el: https://nodejs.org/dist/v18.18.2/node-v18.18.2-linux-ppc64le.tar.gz
+      - on amd64: https://nodejs.org/dist/v20.17.0/node-v20.17.0-linux-x64.tar.gz
+      - on armhf: https://nodejs.org/dist/v20.17.0/node-v20.17.0-linux-armv7l.tar.gz
+      - on arm64: https://nodejs.org/dist/v20.17.0/node-v20.17.0-linux-arm64.tar.gz
+      - on s390x: https://nodejs.org/dist/v20.17.0/node-v20.17.0-linux-s390x.tar.gz
+      - on ppc64el: https://nodejs.org/dist/v20.17.0/node-v20.17.0-linux-ppc64le.tar.gz
   node-red:
     after: [node]
     plugin: nil # We use the nil plugin so we can fully override the build with whatever we need to do
