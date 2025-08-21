@@ -6,12 +6,16 @@ confinement: strict
 grade: stable
 base: core24
 
-architectures:
-  - build-on: amd64
-  - build-on: armhf
-  - build-on: arm64
-  - build-on: s390x
-  - build-on: ppc64el
+platforms:
+  amd64:
+    build-on: [amd64]
+    build-for: [amd64]
+  arm64:
+    build-on: [amd64, arm64]
+    build-for: [arm64]
+  armhf:
+    build-on: [amd64, armhf]
+    build-for: [armhf]
 
 apps:
   node-red:
@@ -48,7 +52,7 @@ parts:
       - on amd64: https://nodejs.org/dist/v22.18.0/node-v22.18.0-linux-x64.tar.gz
       - on armhf: https://nodejs.org/dist/v22.18.0/node-v22.18.0-linux-armv7l.tar.gz
       - on arm64: https://nodejs.org/dist/v22.18.0/node-v22.18.0-linux-arm64.tar.gz
-      - on s390x: https://nodejs.org/dist/v22.18.0/node-v22.18.0-linux-s390x.tar.gz
+      # - on s390x: https://nodejs.org/dist/v22.18.0/node-v22.18.0-linux-s390x.tar.gz
       # - on ppc64el: https://nodejs.org/dist/v22.18.0/node-v22.18.0-linux-ppc64le.tar.gz
   node-red:
     after: [node]
